@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Promo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #e1bee7);
+      text-align: center;
+      touch-action: pan-y; /* Allow vertical touch scrolling */
+    }
+
+    .slider {
+      width: 100%;
+      max-width: 380px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+      width: 100%;
+    }
+
+    .slide {
+      flex: 0 0 100%;
+      position: relative;
+    }
+
+    .slide-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .app-card {
+      margin: 30px auto;
+      max-width: 350px;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      border-radius: 10px;
+      padding: 4px 20px;
+      box-shadow: 0 10px 25px rgba(0, 114, 255, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      border: 2px solid #00c6ff;
+      color: white;
+    }
+
+    .app-logo {
+      width: 55px;
+      height: 55px;
+      border-radius: 12px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .app-name {
+      font-size: 19px;
+      font-weight: 600;
+      flex: 1;
+      text-align: left;
+      padding-left: 10px;
+      color: #ffffff;
+    }
+
+    .install-btn {
+      background: #003cb3; /* गाढ़ा नीला */
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: 0.3s ease;
+    }
+
+    .install-btn:hover {
+      background: #002080; /* और गहरा नीला hover पर */
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ccc;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .dot.active {
+      background: #0072ff;
+    }
+  </style>
+</head>
+<body>
+
+ 
+ <!-- Updated slider content -->
+<div class="slider">
+  <div class="slides" id="slides">
+    <div class="slide">
+      <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEginSJ4UspxjM15Zp5aJz11QwhFapPGdn1FUV3mZ6S7JFzA0FUwFUIWeGxNnJm_2YzDt445Vw_dPW4-yTcJZnPZSMpaI3FEz6XdWkSsarmhkAlZ2hdi5CCRv0r0DWwdDU9gVmJgEJoYFqfxV078uZ2YJWf6axOSGFPdCrgie2qnfPoVIGAjLlxY1j-bnPDm/s800/IMG-20250418-WA0023.jpg" class="slide-link" target="_blank">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEginSJ4UspxjM15Zp5aJz11QwhFapPGdn1FUV3mZ6S7JFzA0FUwFUIWeGxNnJm_2YzDt445Vw_dPW4-yTcJZnPZSMpaI3FEz6XdWkSsarmhkAlZ2hdi5CCRv0r0DWwdDU9gVmJgEJoYFqfxV078uZ2YJWf6axOSGFPdCrgie2qnfPoVIGAjLlxY1j-bnPDm/s800/IMG-20250418-WA0023.jpg" alt="Ad 1">
+      </a>
+    </div>
+    <div class="slide">
+      <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGsTSHqu83hAbjpREWhNSKkE42YS97crvC9vqC6a_yT1DKF9CA2Ze1bMLwxNpMDbXV6ZRCucf6qh9TORM6f1_tq5a-VRfx3uMDnsx5YNoALK0w7OORi7gte9QsIEuhz2_LqolIlFBm61TddVv3JtHrOUgc1h5Mbq4rwdajIiQR1BwFN8h-Ai5LVR8Sv9KU/s320/%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A4%AF%20%E0%A4%95%E0%A5%81%E0%A4%AE%E0%A4%BE%E0%A4%B0%20%E0%A4%AF%E0%A4%BE%E0%A4%A6%E0%A4%B5_20241230_125918_2.jpg" class="slide-link" target="_blank">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEginSJ4UspxjM15Zp5aJz11QwhFapPGdn1FUV3mZ6S7JFzA0FUwFUIWeGxNnJm_2YzDt445Vw_dPW4-yTcJZnPZSMpaI3FEz6XdWkSsarmhkAlZ2hdi5CCRv0r0DWwdDU9gVmJgEJoYFqfxV078uZ2YJWf6axOSGFPdCrgie2qnfPoVIGAjLlxY1j-bnPDm/s800/IMG-20250418-WA0023.jpg" alt="Ad 2"> <!-- Replace with actual image URL if needed -->
+      </a>
+    </div>      
+    <div class="slide">
+      <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGsTSHqu83hAbjpREWhNSKkE42YS97crvC9vqC6a_yT1DKF9CA2Ze1bMLwxNpMDbXV6ZRCucf6qh9TORM6f1_tq5a-VRfx3uMDnsx5YNoALK0w7OORi7gte9QsIEuhz2_LqolIlFBm61TddVv3JtHrOUgc1h5Mbq4rwdajIiQR1BwFN8h-Ai5LVR8Sv9KU/s808/%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A4%AF%20%E0%A4%95%E0%A5%81%E0%A4%AE%E0%A4%BE%E0%A4%B0%20%E0%A4%AF%E0%A4%BE%E0%A4%A6%E0%A4%B5_20241230_125918_2.jpg" class="slide-link" target="_blank">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEginSJ4UspxjM15Zp5aJz11QwhFapPGdn1FUV3mZ6S7JFzA0FUwFUIWeGxNnJm_2YzDt445Vw_dPW4-yTcJZnPZSMpaI3FEz6XdWkSsarmhkAlZ2hdi5CCRv0r0DWwdDU9gVmJgEJoYFqfxV078uZ2YJWf6axOSGFPdCrgie2qnfPoVIGAjLlxY1j-bnPDm/s800/IMG-20250418-WA0023.jpg" alt="Ad 6">
+      </a>
+    </div>
+  </div>
+  <div class="dots" id="dots"></div>
+</div>
+
+
+<button id="button1" onclick="myFunction()"> उपलब्ध विशेषताएं
+लव कैलकुलेटर: प्यार का प्रतिशत + रोमांटिक शायरी
+प्रेम मैच मेकर: रिश्ते के अनुसार मैचिंग + प्रेम टिप्स
+फ्रेंडशिप कैलकुलेटर: दोस्ती का प्रतिशत + दोस्ती शायरी
+पारिवारिक प्यार: पापा, माँ, भाई-बहन का प्यार कैलकुलेटर
+शायरी जेनरेटर: कस्टम शायरी + जोक्स + रोचक तथ्य
+  </button>  
+बच्चो के पढ़ाई, लिखाई से सम्बंधित 100+Game
+<h1>
+अभी Download करें  </h2>   
+
+<a href="#" class="menu-item">यादव सर का FunSpark app 📲 Download</a>
+
+  <div class="app-card">
+    <img src="logo.png" alt="App Logo" class="app-logo">
+    <span class="app-name">यादव सर का FunSpark app</span>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigH3iJiWn93l24ASpSwVVPsdNmXx7wmbkJsbNDAnEH1JJLfZ0VImzQJLFFHFOJbN3_4gwyV4OBXXgaNg6nwse6t6t2nsQWF07RqMfP5vQSeday4acCzpGrJ1n5Jaigi2QFY4QkH4a3qZkc3-J-1a5UhKFs9pYFV-JGmqxYSbvVw3AvVsRgD7GCuNvgdJDj/s214/IMG-20250418-WA0026_2.jpg" alt="Play Store" width="25" height="15">
+    📲
+    <button class="install-btn" onclick="installApp()">इंस्टॉल</button>
+  </div>
+
+  <script>
+    let index = 0;
+    const slides = document.getElementById('slides');
+    const dotsContainer = document.getElementById('dots');
+    const totalSlides = slides.children.length;
+    let touchStartX = 0;
+    let touchEndX = 0;
+    let autoSlideInterval;
+
+    // Create dots for navigation
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+
+    // Initialize auto slide
+    startAutoSlide();
+
+    function goToSlide(slideIndex) {
+      index = slideIndex;
+      updateSlider();
+    }
+
+    function updateSlider() {
+      slides.style.transform = `translateX(-${index * 100}%)`;
+      
+      // Update active dot
+      const dots = document.querySelectorAll('.dot');
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSlide() {
+      index = (index + 1) % totalSlides;
+      updateSlider();
+    }
+
+    function prevSlide() {
+      index = (index - 1 + totalSlides) % totalSlides;
+      updateSlider();
+    }
+
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(nextSlide, 2000);
+    }
+
+    function stopAutoSlide() {
+      clearInterval(autoSlideInterval);
+    }
+
+    // Touch event handlers for swipe
+    slides.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      stopAutoSlide();
+    }, {passive: true});
+
+    slides.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+      startAutoSlide();
+    }, {passive: true});
+
+    function handleSwipe() {
+      const threshold = 50; // Minimum swipe distance
+      if (touchEndX < touchStartX - threshold) {
+        // Swipe left - next slide
+        nextSlide();
+      } else if (touchEndX > touchStartX + threshold) {
+        // Swipe right - previous slide
+        prevSlide();
+      }
+    }
+
+    // Mouse event handlers for desktop
+    slides.addEventListener('mousedown', (e) => {
+      touchStartX = e.clientX;
+      stopAutoSlide();
+    });
+
+    slides.addEventListener('mouseup', (e) => {
+      touchEndX = e.clientX;
+      handleSwipe();
+      startAutoSlide();
+    });
+
+    slides.addEventListener('mouseleave', () => {
+      startAutoSlide();
+    });
+
+    function installApp() {
+      window.location.href = "https://fun-spark.vercel.app/"; // यहाँ अपने App का लिंक लगाएं
+    }
+  </script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App with OK Button Menu</title>
+    <style>
+        /* OK बटन स्टाइल */
+        #floatingOkBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            color: white;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #floatingOkBtn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        #floatingOkBtn:active {
+            transform: scale(0.95);
+        }
+
+        /* मेनू ओवरले स्टाइल */
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* मेनू कंटेनर स्टाइल */
+        .menu-container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            width: 80%;
+            max-width: 400px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: relative;
+            animation: slideUp 0.4s;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* क्लोज बटन स्टाइल */
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #ff4757;
+            color: white;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .close-btn:hover {
+            transform: rotate(90deg);
+        }
+
+        /* मेनू आइटम्स स्टाइल */
+        .menu-item {
+            display: block;
+            padding: 15px 20px;
+            margin: 10px 0;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .menu-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            background: linear-gradient(45deg, #00f2fe, #4facfe);
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="appContent">
+        <h1>
+        
+        बहुत
+        सारे
+    Game
+    Adda
+        </h1>
+        
+    </div>
+
+    <!-- फ्लोटिंग OK बटन -->
+    <button id="floatingOkBtn">🎮</button>
+
+    <!-- मेनू ओवरले -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-container">
+            <button class="close-btn" id="closeMenuBtn">×</button>
+            <h2 style="color: #333; margin-bottom: 20px; text-align: center;">App Menu</h2>
+            
+            <a href="#" class="menu-item">Home</a>
+            <a href="#" class="menu-item">Profile</a>
+            <a href="#" class="menu-item">My Courses</a>
+            <a href="#" class="menu-item">All Courses</a>
+            <a href="#" class="menu-item">Live Classes</a>
+            <a href="#" class="menu-item">Daily Quiz</a>
+            <a href="#" class="menu-item">Downloads</a>
+            <a href="#" class="menu-item">MCQ</a>
+            <a href="#" class="menu-item">Quiz</a>
+            <a href="#" class="menu-item">Latest Courses</a>
+            <a href="#" class="menu-item">About Us</a>
+            <a href="#" class="menu-item">Share App</a>
+            <a href="#" class="menu-item">Help</a>
+            <a href="#" class="menu-item">Logout</a>
+        </div>
+    </div>
+
+    <script>
+        // OK बटन क्लिक इवेंट
+        document.getElementById('floatingOkBtn').addEventListener('click', function() {
+            document.getElementById('menuOverlay').style.display = 'flex';
+        });
+
+        // मेनू बंद करने का बटन
+        document.getElementById('closeMenuBtn').addEventListener('click', function() {
+            document.getElementById('menuOverlay').style.display = 'none';
+        });
+
+        // ओवरले पर क्लिक करके मेनू बंद करना
+        document.getElementById('menuOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                document.getElementById('menuOverlay').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
